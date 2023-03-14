@@ -1,0 +1,18 @@
+<div *ngIf="!listado">
+    <img src="https://media4.giphy.com/media/11ASZtb7vdJagM/200w.webp?cid=ecf05e47m9005w0jz548ny3khkv36dd67nxwyordial89oze&rid=200w.webp&ct=g"/>
+  </div>
+  
+  <div *ngIf="listado?.length === 0">
+    <span #vacio>
+        <ng-content select="[vacio]"></ng-content>
+    </span>
+    
+    <!-- si no se envio ningun mensaje personalizado de listado vacio... -->
+    <span *ngIf="!vacio.innerHTML.trim()">
+        <p>No hay peliculas para mostrar</p>
+    </span>
+  </div>
+  
+  <ng-container *ngIf="listado && listado.length > 0">
+    <ng-content select="[contenido]"></ng-content>
+  </ng-container>
