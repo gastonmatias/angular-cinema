@@ -6,13 +6,13 @@
     <ng-container contenido>
         <div *ngFor="let movie of movies; let i = index" class="pelicula-contenedor">
 
-            <div>pelicula {{i+1}}: {{movie.titulo}}
-            <button
-                style="margin-left: 1rem;"
-                (click)="remover(i)"
-                >Remover
-            </button>
-        </div>
+            <h2>pelicula {{i+1}}: {{movie.titulo}}
+                <button
+                    style="margin-left: 1rem;"
+                    (click)="remover(i)"
+                    >Remover
+                </button>
+            </h2>
 
         <div>{{movie.fechaEstreno | date}}</div>
         <div>{{movie.precioEntrada | currency}}</div>

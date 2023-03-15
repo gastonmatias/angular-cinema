@@ -1,0 +1,10 @@
+mat-toolbar{
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo{
+    margin-right: 0.5rem;
+}

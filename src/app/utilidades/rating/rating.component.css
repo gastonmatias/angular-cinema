@@ -1,0 +1,12 @@
+.star{
+    color: rgb(183, 181, 181);
+}
+
+.checked{
+    color:orange;
+}
+
+mat-icon{
+    cursor: pointer;
+}
+
