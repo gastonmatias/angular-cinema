@@ -1,21 +1,29 @@
 <app-listado-generico [listado]="movies">
-    <ng-container vacio>
-        <div>No hay movies!!</div>
-    </ng-container>
-
     <ng-container contenido>
-        <div *ngFor="let movie of movies; let i = index" class="pelicula-contenedor">
+        <div class="peliculas-contenedor">
+            <div *ngFor="let movie of movies; let i = index" class="pelicula-contenedor">
+                <a>
+                    <img [src]="movie.poster" alt="Poster"/>
+                </a>   
+                
+                <p>
+                    <a>{{movie.titulo}}</a>
+                </p> 
 
-            <h2>pelicula {{i+1}}: {{movie.titulo}}
-                <button
-                    style="margin-left: 1rem;"
-                    (click)="remover(i)"
-                    >Remover
-                </button>
-            </h2>
+                <div>
+                    <a mat-flat-button color="primary">
+                        Editar
+                    </a>
+                    <button
+                        mat-flat-button
+                        color="warn"
+                        type="button"
+                    >
+                        Borrar
+                    </button>
+                </div>
 
-        <div>{{movie.fechaEstreno | date}}</div>
-        <div>{{movie.precioEntrada | currency}}</div>
+            </div>
         </div>
     </ng-container>
 </app-listado-generico>

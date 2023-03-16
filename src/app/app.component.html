@@ -1,18 +1,6 @@
 <app-menu></app-menu>
 
 <div class="contenedor">
-    
-    <input type="text" (input)="title = $event.target.value">
-    
-    <app-rating (rated)="manejarRated($event)" ></app-rating>
-    <h2>En cines</h2>
-    
-    <app-listado-peliculas [movies]="moviesInCinema">
-    </app-listado-peliculas>
-    
-    <h2>Futuros Estrenos</h2>
-    
-    <app-listado-peliculas [movies]="comingSoonMovies">
-    </app-listado-peliculas>
+    <router-outlet></router-outlet>
 </div>
 
