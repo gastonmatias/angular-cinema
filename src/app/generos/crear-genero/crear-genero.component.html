@@ -1,8 +1,6 @@
 <h2>Crear Género</h2>
 
-<!--[formGroup]="form":
-asocia la prop form creada en ts con el html form
--->
+<!--[formGroup]="form": asocia la prop form creada en ts con el html form-->
 <form (submit)="guardarCambios()" [formGroup]="form">
     <mat-form-field appearance="outline">
         <mat-label>Nombre</mat-label>
@@ -11,6 +9,8 @@ asocia la prop form creada en ts con el html form
     </mat-form-field>
 
     <div>
+        <!-- no es necesario evento click en btn, todo es manejado por
+        el event submit, qe ademas permite gatillar accion con "enter" -->
         <button
             mat-flat-button 
             color="primary"
