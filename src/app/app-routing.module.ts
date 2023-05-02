@@ -19,7 +19,7 @@ const routes: Routes = [
   
   { path:"generos", component: IndiceGenerosComponent },
   { path:"generos/crear", component: CrearGeneroComponent },
-  { path:"generos/editar:id", component: EditarGeneroComponent },
+  { path:"generos/editar/:id", component: EditarGeneroComponent },
   
   { path:"actores", component: IndiceActoresComponent },
   { path:"actores/crear", component: CrearActorComponent },

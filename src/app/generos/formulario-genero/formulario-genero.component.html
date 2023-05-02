@@ -1,0 +1,26 @@
+<!--[formGroup]="form": asocia la prop form creada en ts con el html form-->
+<form (submit)="guardarCambios()" [formGroup]="form">
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input formControlName="nombre" matInput/>
+        <mat-error *ngIf="form.invalid">{{obtenerErrorCampoNombre()}}</mat-error>
+    </mat-form-field>
+
+    <div>
+        <!-- no es necesario evento click en btn, todo es manejado por
+        el event submit, qe ademas permite gatillar accion con "enter" -->
+        <button
+            mat-flat-button 
+            color="primary"
+            type="submit"
+            [disabled]="form.invalid"
+            >
+            Guardar Cambios
+        </button>
+        <a mat-stroked-button routerLink="/generos">
+            Cancelar
+        </a>
+    </div>
+</form>
+
+

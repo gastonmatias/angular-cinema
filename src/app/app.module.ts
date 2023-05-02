@@ -21,7 +21,8 @@ import { EditarActorComponent } from './actores/editar-actor/editar-actor.compon
 import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
 import { EditarCineComponent } from './cines/editar-cine/editar-cine.component';
 import { EditarPeliculaComponent } from './peliculas/editar-pelicula/editar-pelicula.component';
-import {ReactiveFormsModule} from '@angular/forms' //! para utilizar formularios reactivos
+import {ReactiveFormsModule} from '@angular/forms';
+import { FormularioGeneroComponent } from './generos/formulario-genero/formulario-genero.component' //! para utilizar formularios reactivos
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import {ReactiveFormsModule} from '@angular/forms' //! para utilizar formularios
     EditarGeneroComponent,
     EditarCineComponent,
     EditarPeliculaComponent,
+    FormularioGeneroComponent,
   ],
   imports: [
     BrowserModule,
