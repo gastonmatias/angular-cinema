@@ -43,7 +43,7 @@ export class FormularioGeneroComponent {
   }
   
   guardarCambios(){
-    this.submit.emit(this.form.value);//! se envia el valor del form a traves de output "submit"
+    this.submit.emit(this.form.value);//! se envia el VALOR del form a traves de output "submit"
   }
 
   obtenerErrorCampoNombre () {
